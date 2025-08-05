@@ -1,0 +1,13 @@
+:root[data-theme='light'] {
+	--first-bg: #fffaf3;
+	--black: #101010;
+	--deepdark-yellow: #363909;
+	--ghost-orange: #9e9385;
+}
+
+:root[data-theme='dark'] {
+	--first-bg: #fffaf3;
+	--black: #101010;
+	--deepdark-yellow: #363909;
+	--ghost-orange: #9e9385;
+}
