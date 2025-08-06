@@ -1,7 +1,9 @@
+import { useState } from 'react'
 import { Navigate, Outlet } from 'react-router-dom'
 
 export default function ProtectedRoute() {
-	return api.isAuthenticated() ? (
+	const [isAuth, setIsAuth] = useState(true)
+	return isAuth ? (
 		<Outlet /> // рендер вложенных маршрутов
 	) : (
 		<Navigate to='/auth' replace />

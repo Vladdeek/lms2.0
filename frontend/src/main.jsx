@@ -9,7 +9,10 @@ import {
 import { Suspense } from 'react'
 import './index.css'
 import './themes.css'
-import Authorization from './pages/authorization'
+import Authorization from './pages/Authorization'
+import DashboardLayout from './pages/layout/DashboardLayout'
+import MainPage from './pages/MainPage'
+import CustomCursor from './components/Cursor'
 
 function MainApp() {
 	const navigate = useNavigate()
@@ -23,8 +26,8 @@ function MainApp() {
 		>
 			<Routes>
 				<Route path='/auth' element={<Authorization />} />
-				<Route path='/' element={''}>
-					<Route path='main' element={''} />
+				<Route path='/' element={<DashboardLayout />}>
+					<Route path='/main' element={<MainPage />} />
 				</Route>
 			</Routes>
 		</Suspense>
@@ -33,6 +36,7 @@ function MainApp() {
 
 createRoot(document.getElementById('root')).render(
 	<Router>
+		<CustomCursor />
 		<MainApp />
 	</Router>
 )
