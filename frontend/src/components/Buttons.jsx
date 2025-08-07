@@ -20,27 +20,14 @@ export const RoundButton = ({
 		</button>
 	)
 }
-export const Button = ({ img, namebtn, children, scale }) => {
+export const Button = ({ children, width = 'fit' }) => {
 	return (
 		<>
 			<button
-				className={`bg-[var(--color1)] hover:brightness-80 active:scale-97 transition-all inline-flex gap-4 text-white font-medium p-4 px-10 text-lg justify-between items-center rounded-md ${
-					!scale ? 'w-full justify-center' : scale
-				}`}
+				className={`bg-[var(--text)] hover:brightness-80 active:scale-97 transition-all inline-flex gap-4 text-[20px] text-[var(--black)] unbounded font-normal p-4 px-10 text-lg justify-between items-center rounded-lg z-10 `}
+				style={{ width: width }}
 			>
-				{img === 'right' ? (
-					<>
-						<p>{namebtn}</p>
-						<ArrowRight />
-					</>
-				) : img === 'left' ? (
-					<>
-						<ArrowLeft />
-						<p>{namebtn}</p>
-					</>
-				) : (
-					children
-				)}
+				{children}
 			</button>
 		</>
 	)
@@ -49,7 +36,7 @@ export const GrayButton = ({ namebtn }) => {
 	return (
 		<>
 			<button
-				className={`bg-[var(--gray)] hover:brightness-90 active:scale-99 transition-all inline-flex gap-4 text-[var(--text)] font-medium p-4 px-10 text-lg justify-between items-center rounded-md `}
+				className={`bg-[var(--gray)] unbounded hover:brightness-90 transition-all inline-flex gap-4 text-[var(--text)] font-medium p-4 px-10 text-lg justify-between items-center rounded-md `}
 			>
 				{namebtn}
 			</button>
@@ -60,7 +47,7 @@ export const BlackButton = ({ namebtn }) => {
 	return (
 		<>
 			<button
-				className={`bg-black hover:bg-[rgba(0,0,0,0.75)] active:scale-99 transition-all inline-flex gap-4 text-white font-medium p-4 px-10 text-lg justify-between items-center rounded-md `}
+				className={`bg-[var(--text)] unbounded transition-all inline-flex gap-4 text-[var(--black)] font-medium p-4 px-10 text-lg justify-between items-center rounded-md `}
 			>
 				{namebtn}
 			</button>

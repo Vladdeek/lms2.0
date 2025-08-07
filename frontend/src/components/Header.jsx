@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import { Sun, Moon, Search, MessagesSquare } from 'lucide-react'
+import { NavLink } from 'react-router-dom'
 
 const ToggleTheme = ({ onClick }) => {
 	const [isLight, setIsLight] = useState(() => {
@@ -45,13 +46,13 @@ const MessageBtn = ({ onClick }) => {
 
 const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 	return (
-		<div className='relative select-none '>
+		<div className='relative select-none ' data-clickable>
 			<div className='flex items-center'>
 				<p
 					onClick={onToggle}
 					className={`font-bold transition-all text-2xl ${
 						!option
-							? 'hover:text-[var(--primary)] text-[var(--text)]'
+							? 'hover:text-[var(--primary)] text-[var(--text)] '
 							: isOpen
 							? 'text-[var(--primary)]'
 							: 'hover:text-[var(--primary)] text-[var(--text)]'
@@ -63,7 +64,15 @@ const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 			{option && isOpen && (
 				<div className='bg-[var(--first-bg)] min-w-full absolute left-0 rounded-lg flex flex-col gap-6 py-8 px-10 mt-4 text-[#101010] z-50'>
 					{option.map((item, index) => (
-						<div key={index} className='flex gap-3 items-center group'>
+						<NavLink
+							to={item.to}
+							onClick={() => {
+								setIsOpen(prev => !prev)
+							}}
+							date-clickable
+							key={index}
+							className='flex gap-3 items-center group'
+						>
 							<img
 								src='./assets/icons/arrow-right.svg'
 								alt=''
@@ -72,7 +81,7 @@ const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 							<p className='select-none  text-[32px] whitespace-nowrap'>
 								{item.title}
 							</p>
-						</div>
+						</NavLink>
 					))}
 				</div>
 			)}
@@ -94,6 +103,7 @@ const HeaderMenu = ({ title, option }) => {
 						onClick={() => {
 							setIsOpen(prev => !prev)
 						}}
+						data-clickable
 						className='relative h-9 w-9 p-1 flex flex-col justify-center items-center '
 					>
 						<div
@@ -112,7 +122,14 @@ const HeaderMenu = ({ title, option }) => {
 					<div className='bg-[var(--first-bg)] w-full absolute rounded-lg flex flex-col gap-8 py-15 px-10 text-[#101010]'>
 						{option.map(item => {
 							return (
-								<div className='flex gap-3 items-center group'>
+								<NavLink
+									to={item.to}
+									onClick={() => {
+										setIsOpen(prev => !prev)
+									}}
+									data-clickable
+									className='flex gap-3 items-center group cursor-none'
+								>
 									<img
 										src='./assets/icons/arrow-right.svg'
 										alt=''
@@ -121,7 +138,7 @@ const HeaderMenu = ({ title, option }) => {
 									<p className='select-none  text-[32px] whitespace-nowrap'>
 										{item.title}
 									</p>
-								</div>
+								</NavLink>
 							)
 						})}
 					</div>
@@ -135,7 +152,7 @@ const Header = () => {
 		{
 			title: 'Курсы',
 			option: [
-				{ title: 'Все курсы', to: '' },
+				{ title: 'Все курсы', to: '/all' },
 				{ title: 'Поиск курсов', to: '' },
 				{ title: 'Темы документаций', to: '' },
 			],
@@ -158,14 +175,14 @@ const Header = () => {
 	const [openIndex, setOpenIndex] = useState(null)
 	return (
 		<>
-			<div className='grid grid-cols-[1fr_3fr]'>
+			<div className='grid grid-cols-[1fr_3fr] fixed w-full px-40 bg-[var(--black)] pt-10 pb-5 z-100 left-0'>
 				<HeaderMenu
 					title={'МЕЛГУ СУО'}
 					option={[
-						{ title: 'Главная', to: '' },
-						{ title: 'Дашборд', to: '' },
-						{ title: 'Календарь', to: '' },
-						{ title: 'Личные файлы', to: '' },
+						{ title: 'Главная', to: '/main' },
+						{ title: 'Дашборд', to: '/dashboard' },
+						{ title: 'Календарь', to: '/calendar' },
+						{ title: 'Личные файлы', to: '/files' },
 					]}
 				/>
 				<div className='flex justify-end z-10'>
@@ -187,7 +204,7 @@ const Header = () => {
 							<MessageBtn />
 						</div>
 
-						<p className='text-2xl font-bold text-[var(--text)]'>
+						<p className='text-2xl font-bold text-[var(--text)] mix-blend-difference'>
 							{`${FullName.split(' ')[0]} ${FullName.split(' ')[1][0]}.`}
 						</p>
 					</div>

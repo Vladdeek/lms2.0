@@ -85,18 +85,18 @@ const Slider = () => {
 					></div>
 					<div className='rounded-full shadow-[inset_1px_1px_1px_0_var(--glass-light-border),inset_-1px_-1px_2px_0_var(--glass-dark-border)] absolute inset-0 z-0 transition-all'></div>
 					<div
-						className='absolute rounded-full bg-gradient-to-r from-[var(--color1)] to-[var(--color2)] h-2 transition-all duration-300'
+						className='absolute rounded-full bg-[var(--primary)] h-2 transition-all duration-300'
 						style={{ width: progressWidth }}
 					></div>
 				</div>
 
-				<div className='z-20 rounded-md w-full lg:w-4/5 xl:w-3/5 2xl:w-2/5 h-auto p-5 lg:p-10 text-center lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 relative bg-[var(--glass)]'>
+				<div className='z-20 rounded-md w-full lg:w-4/5 xl:w-3/5 2xl:w-2/5 h-auto p-5 lg:p-10 text-center lg:absolute lg:top-1/2 lg:left-1/2 lg:transform lg:-translate-x-1/2 lg:-translate-y-1/2 relative bg-[var(--glass-bg)]'>
 					{/* Эффект изгиба стекла */}
 					<div
 						className='rounded-md backdrop-blur-sm absolute inset-0 z-0'
 						style={{ filter: "url('/glass.svg#lg-dist')" }}
 					></div>
-					<div className='rounded-md shadow-[inset_1px_1px_1px_0_var(--glass-light-border),inset_-1px_-1px_2px_0_var(--glass-dark-border)] absolute inset-0 z-0'></div>
+					<div className='rounded-md  shadow-[inset_1px_1px_1px_0_var(--glass-light-border),inset_-1px_-1px_2px_0_var(--glass-dark-border)] absolute inset-0 z-0'></div>
 					<div className='inline-flex flex-col items-center gap-3 relative z-[3]'>
 						<p className='text-[var(--text)] md:text-2xl xl:text-3xl font-semibold'>
 							{Slides[slideNow].title}
@@ -128,7 +128,7 @@ const Slider = () => {
 				{/* Кнопки */}
 				<button
 					onClick={prevSlide}
-					className='absolute left-3 top-1/2 transform -translate-y-1/2 rounded-full text-[#f4f4f4] p-2 hover:scale-105 transition-all bg-[var(--glass)]'
+					className='absolute left-3 top-1/2 transform -translate-y-1/2 rounded-full text-[#f4f4f4] p-2 hover:scale-105 transition-all bg-[var(--glass-bg)]'
 				>
 					<ChevronLeft className='z-10 relative' />
 					<div
@@ -139,7 +139,7 @@ const Slider = () => {
 				</button>
 				<button
 					onClick={nextSlide}
-					className='absolute right-3 top-1/2 transform -translate-y-1/2 rounded-full text-[#f4f4f4] p-2 hover:scale-105 transition-all bg-[var(--glass)]'
+					className='absolute right-3 top-1/2 transform -translate-y-1/2 rounded-full text-[#f4f4f4] p-2 hover:scale-105 transition-all bg-[var(--glass-bg)]'
 				>
 					<ChevronRight className='z-10 relative' />
 					<div

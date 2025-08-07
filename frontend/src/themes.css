@@ -1,13 +1,18 @@
 :root[data-theme='light'] {
 	--first-bg: #e9ebff;
 	--black: #ffffff;
+	--ghost-black: #f4f4f4;
 	--deepdark-yellow: #363909;
 	--ghost-orange: #9e9385;
 	--text: #000000;
 	--primary: #7782ff;
 	--gray: #f4f4f5;
-	--glass: #f5f5f425;
-	--glass-light: #ffffff75; /* чуть светлее */
+	--light-ghost-black: #cdcdcd;
+	--glass-bg: #f4f4f410; /* Едва заметный черный фон для прозрачности */
+	--glass-inner-lt: #aaaaaa25; /* Светлая внутренняя тень сверху/слева */
+	--glass-inner-rb: #ffffff25; /* Тонкая темная внутренняя тень снизу/справа */
+	--glass-lt: #ffffff33; /* Внешняя тень сверху/слева, чуть темная */
+	--glass-rb: #aaaaaa33; /* Внешняя тень снизу/справа, чуть темнее */
 	--glass-light-border: #fefefe75;
 	--glass-dark-border: #a5a5a550;
 }
@@ -15,13 +20,18 @@
 :root[data-theme='dark'] {
 	--first-bg: #fffaf3;
 	--black: #101010;
+	--ghost-black: #1f1f1f;
 	--deepdark-yellow: #363909;
 	--ghost-orange: #9e9385;
 	--text: #ffffff;
 	--primary: #dbff77;
 	--gray: #262626;
-	--glass: #26262650;
-	--glass-light: #36363670;
+	--light-ghost-black: #505050;
+	--glass-bg: #f4f4f415;
+	--glass-inner-lt: #00000050;
+	--glass-inner-rb: #ffffff10;
+	--glass-lt: #ffffff33;
+	--glass-rb: #f4f4f425;
 	--glass-light-border: #a5a5a550;
 	--glass-dark-border: #20202050;
 }

@@ -14,6 +14,11 @@ import DashboardLayout from './pages/layout/DashboardLayout'
 import MainPage from './pages/MainPage'
 import CustomCursor from './components/Cursor'
 
+import CalendarPage from './pages/Calendar'
+
+import AllCourses from './pages/AllCourses'
+import Courses from './pages/Courses'
+
 function MainApp() {
 	const navigate = useNavigate()
 	return (
@@ -28,6 +33,9 @@ function MainApp() {
 				<Route path='/auth' element={<Authorization />} />
 				<Route path='/' element={<DashboardLayout />}>
 					<Route path='/main' element={<MainPage />} />
+					<Route path='/calendar' element={<CalendarPage />} />
+					<Route path='/course' element={<Courses />} />
+					<Route path='/all' element={<AllCourses />} />
 				</Route>
 			</Routes>
 		</Suspense>
