@@ -62,7 +62,7 @@ const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 				</p>
 			</div>
 			{option && isOpen && (
-				<div className='bg-[var(--first-bg)] min-w-full absolute left-0 rounded-lg flex flex-col gap-6 py-8 px-10 mt-4 text-[#101010] z-50'>
+				<div className='bg-[var(--first-bg)] min-w-full absolute left-0 rounded-lg flex flex-col gap-6 py-8 px-10 mt-4 text-[#101010] z-50 '>
 					{option.map((item, index) => (
 						<NavLink
 							to={item.to}
@@ -71,7 +71,7 @@ const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 							}}
 							date-clickable
 							key={index}
-							className='flex gap-3 items-center group'
+							className='flex gap-3 items-center group cursor-none'
 						>
 							<img
 								src='./assets/icons/arrow-right.svg'

@@ -1,4 +1,4 @@
-import { TrendingUp } from 'lucide-react'
+import { ImageOff, TrendingUp } from 'lucide-react'
 import { BlackButton } from './Buttons'
 import { NavLink } from 'react-router-dom'
 
@@ -29,13 +29,20 @@ export const CourseCard = ({ title, tag, img_path, to }) => {
 	return (
 		<NavLink
 			to={to}
-			className=' rounded-lg h-fit flex flex-col overflow-hidden w-full group cursor-none hover:border-1 border-[#afafaf15]'
+			className=' rounded-lg h-fit flex flex-col overflow-hidden w-full group cursor-none border-1 border-transparent hover:border-[#afafaf15]'
 		>
-			<img
-				className='w-full h-50 rounded-lg object-cover'
-				src={img_path}
-				alt=''
-			/>
+			{img_path.length !== 0 ? (
+				<img
+					className='w-full h-50 rounded-lg object-cover'
+					src={img_path}
+					alt=''
+				/>
+			) : (
+				<div className='w-full h-50 flex items-center justify-center bg-[var(--ghost-black)] text-[var(--light-ghost-black)] rounded-lg object-cover'>
+					<ImageOff size={128} />
+				</div>
+			)}
+
 			<div className='flex flex-col h-50 justify-between px-3 py-5 '>
 				<p className='font-bold text-2xl text-[var(--text)] group-hover:text-[var(--primary)] transition-all '>
 					{title}
