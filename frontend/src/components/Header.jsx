@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { Sun, Moon, Search, MessagesSquare } from 'lucide-react'
 import { NavLink } from 'react-router-dom'
+import { ArrowR } from '../../public/assets/icons/ArrowsSvg'
 
 const ToggleTheme = ({ onClick }) => {
 	const [isLight, setIsLight] = useState(() => {
@@ -73,10 +74,10 @@ const HeaderDropdown = ({ title, option = false, isOpen, onToggle }) => {
 							key={index}
 							className='flex gap-3 items-center group cursor-none'
 						>
-							<img
-								src='./assets/icons/arrow-right.svg'
-								alt=''
-								className='h-9 group-hover:w-9 group-hover:p-1 w-0 transition-all '
+							<ArrowR
+								color={'var(--black)'}
+								size={36}
+								className='group-hover:w-9 w-0 transition-all '
 							/>
 							<p className='select-none  text-[32px] whitespace-nowrap'>
 								{item.title}
@@ -130,11 +131,12 @@ const HeaderMenu = ({ title, option }) => {
 									data-clickable
 									className='flex gap-3 items-center group cursor-none'
 								>
-									<img
-										src='./assets/icons/arrow-right.svg'
-										alt=''
-										className='h-9 group-hover:w-9 group-hover:p-1 w-0 transition-all '
+									<ArrowR
+										color={'var(--black)'}
+										size={36}
+										className='group-hover:w-9 w-0 transition-all '
 									/>
+
 									<p className='select-none  text-[32px] whitespace-nowrap'>
 										{item.title}
 									</p>

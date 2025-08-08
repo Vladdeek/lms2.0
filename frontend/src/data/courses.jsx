@@ -21,7 +21,7 @@ export const courses = [
 			{
 				img_path:
 					'https://i.pinimg.com/736x/41/26/96/412696b9ec5e37e2952fb4a689053f98.jpg',
-				title: 'Знакомство с JavaScript',
+				title: 'Знакомство с javaScript',
 				tag: 'Лекция',
 				faculty: 'Технический',
 				specialization: 'ФИИТ',

@@ -14,9 +14,20 @@
 	font-weight: 700;
 }
 
+@font-face {
+	font-family: 'MabryPro';
+	src: url('../public/assets/fonts/MabryPro-Medium.ttf') format('truetype');
+	font-weight: 500;
+}
+@font-face {
+	font-family: 'MabryPro';
+	src: url('../public/assets/fonts/MabryPro-Bold.ttf') format('truetype');
+	font-weight: 700;
+}
+
 body {
 	background-color: var(--black);
-	font-family: 'TT Travels', sans-serif;
+	font-family: 'MabryPro', sans-serif;
 	cursor: none;
 }
 button {

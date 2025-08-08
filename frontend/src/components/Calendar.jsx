@@ -101,7 +101,7 @@ const Calendar = () => {
 					<ArrowL onClick={prevWeek} />
 
 					<p className='text-[20px] font-medium text-[var(--text)]'>
-						{format(weekStart, 'd', { locale: ru })}
+						{format(weekStart, 'd', { locale: ru })} -
 						{format(weekEnd, 'd MMMM', { locale: ru })}
 					</p>
 					<ArrowR onClick={nextWeek} />
