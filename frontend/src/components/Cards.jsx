@@ -49,7 +49,7 @@ export const CourseCard = ({ title, tag, img_path, to }) => {
 				</p>
 
 				<p
-					className={`bg-[var(--primary)] w-fit text-[var(--black)] rounded-lg py-3 px-5 font-normal text-base transition-all unbounded grayscale-100 group-hover:grayscale-0 invert-100 group-hover:invert-0 brightness-95 group-hover:brightness-100 opacity-50 group-hover:opacity-100`}
+					className={`bg-[var(--ghost-black)] w-fit text-[var(--light-ghost-black)] group-hover:bg-[var(--primary)] group-hover:text-[var(--black)] rounded-lg py-3 px-5 font-normal text-base transition-all unbounded `}
 				>
 					{tag}
 				</p>
