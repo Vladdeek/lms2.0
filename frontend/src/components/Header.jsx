@@ -160,10 +160,6 @@ const Header = () => {
 			],
 		},
 		{
-			title: 'Документы',
-			option: false,
-		},
-		{
 			title: 'RU',
 			option: [
 				{ title: 'RU', to: '' },

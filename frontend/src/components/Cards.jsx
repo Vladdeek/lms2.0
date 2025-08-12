@@ -18,7 +18,7 @@ export const ProductCard = ({ color, children, title, subtitle, namebtn }) => {
 				<p className='text-xl font-medium mt-5'>{title}</p>
 				<p className='text-xl font-normal mb-5'>{subtitle}</p>
 				<div className='w-fit'>
-					<BlackButton namebtn={namebtn} />
+					<BlackButton title={namebtn} />
 				</div>
 			</div>
 		</>
@@ -48,7 +48,7 @@ export const CourseCard = ({ title, img_path, to, follow }) => {
 					{title}
 				</NavLink>
 				{!follow ? (
-					<BlackButton title={'Подписаться'} />
+					<BlackButton title={'Записаться на курс'} />
 				) : (
 					<p className='bg-[var(--ghost-black)] text-[var(--light-ghost-black)] px-6 py-4 rounded-lg w-fit flex justify-center items-center text-[20px] unbounded font-normal'>
 						Подписан

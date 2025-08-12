@@ -6,7 +6,7 @@ const Slider = () => {
 	const Slides = [
 		{
 			image:
-				'https://space.rosea.dev/pluginfile.php/1/theme_space/block1slideimg1/1749469386/hero-1.jpg',
+				'https://i.pinimg.com/736x/49/92/b2/4992b25ad56cb8ef454e32b651c2cbed.jpg',
 			title: 'Привет, Moodle 4!',
 			subtitle:
 				'МелГУ СУО 1.2 предназначен для Moodle версий 4.5, 4.4, 4.3, 4.2 и 4,1, а МелГУ СУО 1.1 - для Moodle версий 3.9 - 3.11.',
@@ -76,7 +76,7 @@ const Slider = () => {
 
 	return (
 		<>
-			<div className='relative rounded-md md:flex md:flex-col overflow-hidden'>
+			<div className='relative rounded-md md:flex md:flex-col overflow-hidden h-150'>
 				{/* Прогрессбар */}
 				<div className='absolute w-[98%] rounded-full bg-[var(--glass)] h-2 top-3 mx-3 backdrop-blur-xs z-21'>
 					<div
@@ -98,7 +98,7 @@ const Slider = () => {
 					></div>
 					<div className='rounded-md  shadow-[inset_1px_1px_1px_0_var(--glass-light-border),inset_-1px_-1px_2px_0_var(--glass-dark-border)] absolute inset-0 z-0'></div>
 					<div className='inline-flex flex-col items-center gap-3 relative z-[3]'>
-						<p className='text-[var(--text)] md:text-2xl xl:text-3xl font-semibold'>
+						<p className='text-[var(--text)] md:text-2xl xl:text-3xl font-semibold '>
 							{Slides[slideNow].title}
 						</p>
 						<p className='text-[var(--text)] text-md font-medium w-6/7 text-center'>
@@ -112,7 +112,7 @@ const Slider = () => {
 								<GrayButton namebtn={'Получить эту тему!'} />
 							</div>
 							<div className='inline-flex mx-auto'>
-								<BlackButton namebtn={'МелГУ СУО 1.2 для Moodle 4.5 - 4.0 '} />
+								<BlackButton title={'МелГУ СУО 1.2 для Moodle 4.5 - 4.0 '} />
 							</div>
 						</div>
 					</div>

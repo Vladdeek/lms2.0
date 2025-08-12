@@ -11,26 +11,9 @@ const MainPage = () => {
 						Привет! Hi! <br /> МелГУ СУО 1.2 уже здесь!
 					</p>
 				</div>
-				<div className='w-full inline-flex justify-center mt-7'>
-					<p className='text-[var(--text)] w-4/6 text-lg text-center font-normal'>
-						Пользовательский интерфейс был полностью переработан для улучшения
-						взаимодействия с пользователем и теперь включает встроенный темный
-						режим. Он также включает в себя все функции Moodle 4.0 и был
-						оптимизирован с использованием на 50% меньшего количества CSS.
-					</p>
-				</div>
-				<div className='w-full inline-flex justify-center gap-3 mt-10'>
-					<BlackButton title={'Получить эту тему за ₽1499*'} />
-					<GrayButton namebtn={'Документация'} />
-				</div>
-				<div className='w-full inline-flex justify-center mt-10'>
-					<p className=' text-[var(--secondary-text)] text-xs font-normal'>
-						Доверяет сотни клиентов
-					</p>
-				</div>
-				<div className='w-full flex justify-center mt-10'>
-					<Slider />
-				</div>
+
+				<Slider />
+
 				<div className='w-full flex justify-center mt-10'>
 					<img
 						src='https://space.rosea.dev/pluginfile.php/1/theme_space/spacesettingsimgs/0/logo-sq.svg'
