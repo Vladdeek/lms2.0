@@ -20,7 +20,7 @@ const MainPage = () => {
 					</p>
 				</div>
 				<div className='w-full inline-flex justify-center gap-3 mt-10'>
-					<BlackButton namebtn={'Получить эту тему за ₽1499*'} />
+					<BlackButton title={'Получить эту тему за ₽1499*'} />
 					<GrayButton namebtn={'Документация'} />
 				</div>
 				<div className='w-full inline-flex justify-center mt-10'>

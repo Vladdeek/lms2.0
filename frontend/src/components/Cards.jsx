@@ -1,5 +1,5 @@
 import { ImageOff, TrendingUp } from 'lucide-react'
-import { BlackButton } from './Buttons'
+import { BlackButton, Button } from './Buttons'
 import { NavLink } from 'react-router-dom'
 
 export const ProductCard = ({ color, children, title, subtitle, namebtn }) => {
@@ -25,12 +25,9 @@ export const ProductCard = ({ color, children, title, subtitle, namebtn }) => {
 	)
 }
 
-export const CourseCard = ({ title, tag, img_path, to }) => {
+export const CourseCard = ({ title, img_path, to, follow }) => {
 	return (
-		<NavLink
-			to={to}
-			className=' rounded-lg h-fit flex flex-col overflow-hidden w-full group cursor-none border-1 border-transparent hover:border-[#afafaf15]'
-		>
+		<div className=' rounded-lg h-fit flex flex-col overflow-hidden w-full group cursor-none border-1 border-transparent transition-all hover:border-[#afafaf15]'>
 			{img_path.length !== 0 ? (
 				<img
 					className='w-full h-50 rounded-lg object-cover'
@@ -44,16 +41,20 @@ export const CourseCard = ({ title, tag, img_path, to }) => {
 			)}
 
 			<div className='flex flex-col h-50 justify-between px-3 py-5 '>
-				<p className='font-bold text-2xl text-[var(--text)] group-hover:text-[var(--primary)] transition-all '>
-					{title}
-				</p>
-
-				<p
-					className={`bg-[var(--ghost-black)] w-fit text-[var(--light-ghost-black)] group-hover:bg-[var(--primary)] group-hover:text-[var(--black)] rounded-lg py-3 px-5 font-normal text-base transition-all unbounded `}
+				<NavLink
+					to={to}
+					className='font-bold text-2xl text-[var(--text)] hover:text-[var(--primary)] transition-all cursor-none'
 				>
-					{tag}
-				</p>
+					{title}
+				</NavLink>
+				{!follow ? (
+					<BlackButton title={'Подписаться'} />
+				) : (
+					<p className='bg-[var(--ghost-black)] text-[var(--light-ghost-black)] px-6 py-4 rounded-lg w-fit flex justify-center items-center text-[20px] unbounded font-normal'>
+						Подписан
+					</p>
+				)}
 			</div>
-		</NavLink>
+		</div>
 	)
 }

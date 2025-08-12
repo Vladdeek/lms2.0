@@ -43,13 +43,11 @@ export const GrayButton = ({ namebtn }) => {
 		</>
 	)
 }
-export const BlackButton = ({ namebtn }) => {
+export const BlackButton = ({ title }) => {
 	return (
 		<>
-			<button
-				className={`bg-[var(--text)] unbounded transition-all inline-flex gap-4 text-[var(--black)] font-medium p-4 px-10 text-lg justify-between items-center rounded-md `}
-			>
-				{namebtn}
+			<button className='bg-[var(--text)] text-[var(--black)] px-6 py-4 rounded-lg w-fit flex justify-center items-center text-[20px] unbounded font-normal hover:bg-[var(--primary)] hover:text-[var(--black)] transition-all'>
+				{title}
 			</button>
 		</>
 	)

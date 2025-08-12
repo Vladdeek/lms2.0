@@ -4,103 +4,46 @@ export const courses = [
 		faculty: 'Технический',
 		courses: [
 			{
+				id: 1,
 				img_path:
-					'https://i.pinimg.com/736x/66/f7/22/66f72263bb2ebe4cf2436a49bf76e7af.jpg',
-				title: 'Введение в HTML',
-				tag: 'Лекция',
-				specialization: 'ФИИТ',
+					'https://i.pinimg.com/1200x/22/bc/8e/22bc8ebef610eb881071e1a7007a7a80.jpg',
+				title: 'Технологии WEB-Разработки',
+				follow: true,
 			},
 			{
+				id: 1,
 				img_path:
-					'https://i.pinimg.com/736x/9b/0c/7c/9b0c7cc521987e83e60b49791828362b.jpg',
-				title: 'Основы CSS',
-				tag: 'Лекция',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
+					'https://i.pinimg.com/1200x/7a/e0/93/7ae093ffadb95e1bc68f90d73eb5de88.jpg',
+				title: 'CASE технологии',
+				follow: false,
 			},
 			{
+				id: 1,
 				img_path:
-					'https://i.pinimg.com/736x/41/26/96/412696b9ec5e37e2952fb4a689053f98.jpg',
-				title: 'Знакомство с javaScript',
-				tag: 'Лекция',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
+					'https://i.pinimg.com/736x/6b/41/51/6b4151d93e3be10508b66986591b58ab.jpg',
+				title: 'Теория Разработки Программных Продуктов',
+				follow: false,
 			},
 			{
+				id: 1,
 				img_path:
-					'https://i.pinimg.com/736x/a2/e2/9f/a2e29fc13256aecd5f4b700fc53c3e7b.jpg',
-				title: 'Git и GitHub для новичков',
-				tag: 'Лекция',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-			// + 2 новые лекции
-			{
-				img_path: '',
-				title: 'Работа с формами в HTML',
-				tag: 'Лекция',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
+					'https://i.pinimg.com/736x/ec/c7/6a/ecc76a3684f27c0c5ee4cd28b4cce128.jpg',
+				title: 'Численные методы',
+				follow: false,
 			},
 			{
-				img_path: '',
-				title: 'Flexbox и Grid в CSS',
-				tag: 'Лекция',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-
-			// + 3 практики
-			{
-				img_path: '',
-				title: 'Верстка личной страницы',
-				tag: 'Практика',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
+				id: 1,
+				img_path:
+					'https://i.pinimg.com/736x/53/9d/1f/539d1fe8456c5d1b0ebb758af432c4b1.jpg',
+				title: 'Теория игр и Числовых операций',
+				follow: false,
 			},
 			{
-				img_path: '',
-				title: 'Создание адаптивного макета',
-				tag: 'Практика',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-			{
-				img_path: '',
-				title: 'Применение Flexbox и Grid',
-				tag: 'Практика',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-
-			// + 4 Лабораторная работа
-			{
-				img_path: '',
-				title: 'Разметка статьи с картинками',
-				tag: 'Лабораторная работа',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-			{
-				img_path: '',
-				title: 'Создание формы обратной связи',
-				tag: 'Лабораторная работа',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-			{
-				img_path: '',
-				title: 'Стилизация таблиц данных',
-				tag: 'Лабораторная работа',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
-			},
-			{
-				img_path: '',
-				title: 'Разработка лендинга с анимацией',
-				tag: 'Лабораторная работа',
-				faculty: 'Технический',
-				specialization: 'ФИИТ',
+				id: 1,
+				img_path:
+					'https://i.pinimg.com/736x/31/22/af/3122af942dce6fe22ea9a64823731018.jpg',
+				title: 'СУБД PostgreSQL',
+				follow: true,
 			},
 		],
 	},

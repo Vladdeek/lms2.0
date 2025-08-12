@@ -99,10 +99,7 @@ const FacultyCourses = () => {
 								key={index}
 								img_path={course.img_path}
 								title={course.title}
-								description={course.description}
-								tag={course.tag}
-								procent={course.procent}
-								isProgressbar={course.isProgressbar}
+								follow={course.follow}
 							/>
 						))}
 					</Accordion>
@@ -178,10 +175,7 @@ export const AllCourses = () => {
 						key={index}
 						img_path={course.img_path}
 						title={course.title}
-						description={course.description}
-						tag={course.tag}
-						procent={course.procent}
-						isProgressbar={course.isProgressbar}
+						follow={course.follow}
 					/>
 				))}
 			</div>
